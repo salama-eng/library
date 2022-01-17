@@ -26,10 +26,11 @@ ul
   
     list-style:none;
     display: flex;
-  
 
 }
-
+a{
+  text-decoration: none;
+}
  header ul li
 {
     border-width:1px 1px 1px 0;
@@ -117,8 +118,97 @@ header img
 
 	margin-bottom: 10px;
 }
-
+.logo
+{
+  width: 100%;
+  display:flex;
+}
+.logo img
+{
+  width: 9rem;
+  height:9rem;
+ 
+}
+.logo input
+{
+ padding: 1rem;
+ margin: 1rem;
+ height: 3rem;
+ align-self: flex-end;
+ 
+}
+.basket
+{
+  background-color: grey;
+  border-radius:5rem;
+  margin: 1rem;
+  padding: 1rem;
+  width:4rem;
+ 
+}
 /************* end nav*******************/
+
+/*********** Slider ****************/
+
+
+
+/***************  category***********************/
+.main
+{
+  display: grid;
+  grid-template-columns:3fr 1fr;
+  margin: 3rem;
+}
+.main ul li
+{
+  padding: 1rem;
+ margin-left:auto;
+}
+
+.category img
+{
+ margin: .2rem;
+  width:80px;
+
+}
+.cat-title
+{
+  display:flex;
+  border:3px solid olivedrab;
+  border-radius: .5rem;
+  justify-content: end;
+}
+.cat-title h2
+{
+  
+ color :olivedrab;
+  border-radius: .5rem;
+  align-self:center;
+  margin: .5rem;
+}
+.cat-result
+{
+  margin-top: 1rem;
+  
+
+
+}
+.cat-result h1
+{
+  background-color: olivedrab;
+border-radius: 0.5rem 0.5rem 0 0;
+  color: aliceblue;
+  padding:0.5rem;
+  font-size:1.5rem;
+}
+.cat-result div
+{
+  background-color: rgb(205, 230, 236);
+  color: rgb(40, 40, 41);
+  padding:0.5rem;
+  font-size:1.5rem;
+}
+
 
 
 /****************FOOTER*********************/
