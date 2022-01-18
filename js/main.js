@@ -59,3 +59,4 @@ const callImage = image => {
    document.getElementById("imageView").setAttribute("src", image.getAttribute("src"));
    document.getElementById('popUP').style.display = "block";
 }
+const hideModule = id => document.getElementById(id).style.display = "none";

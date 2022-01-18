@@ -205,6 +205,16 @@ margin:0.3rem;
  
 }
 /*******************books***********************/
+.books
+{
+  display: flex;
+  margin-left: 15%;
+  margin-right: 15%;
+  justify-content: space-around;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
 .book
 {
   text-align: center;
@@ -214,13 +224,14 @@ margin:0.3rem;
   width:15rem;
   padding: 1rem;
   border: 1px solid black;
-  
+
 
   
 }
 .booktype
 {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  width: 100%;
  display: flex;
  align-items: center;
 }
@@ -229,11 +240,10 @@ margin:0.3rem;
 
 
 #popUP {
-    width: 100%;
+    width: 50%;
     height: 100%;
-    position: fixed;
+    position:fixed;
     top: 0;
-    background-color: rgba(3, 3, 3, 0.6);
     display: none;
     transition: 1s;
 }
