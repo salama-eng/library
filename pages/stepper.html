@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+.container
+{
+ width: 100%;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ margin-top: 20vh;
+ position: relative;
+ z-index: -2;
+ height: 10vh;
+
+}
+.circle
+{
+ border: 3px solid grey;
+ border-radius: 50%;
+ width:40px;
+height: 40px;
+display: flex;
+justify-content:center;
+background-color: turquoise;
+align-items:center;
+}
+.container-btn
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20vh;
+    position: relative;
+}
+.progres
+{
+display: flex;
+width: 80%;
+position: absolute;
+justify-content:space-between;
+align-items: center;
+}
+.progres::before
+{
+    content:'';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    z-index: -1;
+    background-color: aqua;
+    height: 2px;
+
+    
+}
+.active
+{
+    border: 3px solid rgb(0, 255, 115) !important;
+   background-color: rgb(170, 255, 0) !important;
+   color: white;
+}
+.btn 
+{
+    border: none;
+    background-color: rgb(16, 70, 102);
+    width: 5rem;
+    height: 3rem;
+    border-radius: 2rem;
+    color: wheat;
+    font-size: 1.5rem;
+}
+.active-form
+{
+    display: block !important;
+}
+.form{
+text-align: center;
+}
+.form1 form,#form2 form
+{
+    width:100%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+
+}
+.form1 form input,#form2 form input
+{
+    margin: auto;
+    width:40%;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around;
+  padding:1rem;
+  border-radius: 2rem;
+  border:none;
+  background-color: rgb(181, 240, 225);
+  margin-top: 1rem;
+ 
+  
+
+}
+.form1
+{
+    display:none;
+}
+#form3 
+{
+    color: rgb(6, 36, 53);
+    margin: 2rem;
+    font-size: 1.3rem;
+
+}
+#form3 input
+{
+   
+
+ 
+  padding:1rem;
+  border-radius: 2rem;
+  border:none;
+  background-color: rgb(181, 240, 225);
+  margin-top: 1rem;
+ 
+}
+.place-order
+{
+  
+    border: none;
+    background-color: rgb(16, 70, 102);
+    width: 10rem;
+    height: 3rem;
+    border-radius: 2rem;
+    color: wheat;
+    font-size: 1rem;
+    margin: auto;
+}
+#form4 form{
+    font-size:2rem;
+    margin: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  gap:2rem;
+  
+}
+</style>
+
+    <div class="container">
+        <div id="progres" class="progres">
+            <div class="circle">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+
+    </div>
+    <div class="container-btn">
+        <button id="prev-btn" class="btn">prev</button>
+        <button id="next-btn" class="btn">next</button>
+    </div>
+
+
+     <div class="form">
+    <div id="form1" class="form1">
+
+    <form>
+    <input type="text" placeholder="enter your name">
+    <input type="text" placeholder="enter your email addres">
+    <input type="text" placeholder="enter your phone number">
+     
+    </form>
+    </div>
+    <div id="form2" class="form1">
+
+        <form >
+     
+            <input type="text" placeholder="enter your country">
+            <input type="text" placeholder="enter your current address">
+            <input type="text" placeholder="enter your zipcode">
+        </form>
+        
+    </div>
+
+    <div id="form3" class="form1">
+   <h3>please choose your payment way</h3>
+        <form>
+   
+      <input type="radio" name="payment" value="paypal" checked> paypal
+      <input type="radio" name="payment" value="VISA" > Visa
+      <input type="number" placeholder="enter your card number">
+    
+        </form>
+    </div>
+
+    <div id="form4"  class="form1">
+
+        <form>
+    
+          <h3>GREAT!! WE ARE ABOUT TO DONE </h3>
+         <label>Total Price :</label>  <p style="color: red;">745$</p>
+         
+         <button class="place-order">pleace order</button>
+    
+        </form>
+    </div>
+</div> 
+
+        
+    <script>
+  const nextbtn=document.getElementById('next-btn');
+  const prevbtn=document.getElementById('prev-btn');
+  const progres=document.getElementById('progres');
+  const steps=document.querySelectorAll('.circle');/***to return array********/
+  const forms=document.querySelectorAll('.form1')
+  const form1=document.getElementById('form1');
+  const form2=document.getElementById('form2');
+  const form3=document.getElementById('form3');
+  const form4=document.getElementById('form4');
+  let index=-1;
+  nextbtn.addEventListener("click",function(){
+   index++;
+
+  if(index>steps.length)
+  {
+   index=steps.length;
+  }
+steps.forEach((item,i)=>{
+  if(i<=index)
+  {
+   
+      item.classList.add('active'); 
+      forms.forEach((item,i)=>{
+      if(i==index){
+        item.classList.add('active-form'); 
+        let x=index;
+      }
+     else if(i==index-1){
+        item.classList.remove('active-form'); 
+      }
+    });
+   }
+ 
+
+
+});
+
+  });
+
+  prevbtn.addEventListener("click",function(){
+   index--;
+ 
+  steps.forEach((item,i)=>{
+  if(i>index)
+  {
+     
+      item.classList.remove('active');
+   
+  }
+
+});
+
+forms.forEach((item,i)=>{
+      if(i==index+1)
+      {
+          item.classList.remove('active-form'); 
+      }
+      else if(i=index)
+      item.classList.add('active-form'); 
+      
+     
+  });
+
+
+
+  });
+
+
+  
+
+    </script>
+</body>
+</html>

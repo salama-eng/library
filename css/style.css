@@ -197,11 +197,13 @@ margin:0.3rem;
   {
     
     animation: slid1 4s infinite;
+    width: 100%;
  
   }
 
 .slider1,.slider2,.slider3
 {
+ 
   z-index: -1;
   position:absolute;
   display: flex;
