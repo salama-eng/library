@@ -60,3 +60,18 @@ const callImage = image => {
    document.getElementById('popUP').style.display = "block";
 }
 const hideModule = id => document.getElementById(id).style.display = "none";
+
+const bookprev=document.getElementById('book-prev');
+const booknext=document.getElementById('book-next');
+
+
+bookprev.addEventListener("click",()=>{
+   document.getElementById("imageView").src="books/harry1.jpg";
+
+});
+
+
+booknext.addEventListener("click",()=>{
+   document.getElementById("imageView").src="books/harry2.jpg";
+
+});
