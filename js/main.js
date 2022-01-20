@@ -75,3 +75,12 @@ booknext.addEventListener("click",()=>{
    document.getElementById("imageView").src="books/harry2.jpg";
 
 });
+
+
+/*******************CART ************ */
+const container1 =document.getElementById('cart-container');
+let cartbtn=document.getElementById('cart');
+cartbtn.addEventListener("click",()=>{
+   container1.style.visibility='visible';
+
+});

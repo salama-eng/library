@@ -318,8 +318,106 @@ border-radius: 0.5rem 0.5rem 0 0;
   font-size:1.5rem;
 }
 
+/*****************CART***********************/
+.cart-container
+{
 
+  visibility: visible;
+  position: absolute;
+ display: flex;
+ flex-wrap: wrap;
+ text-align: right;
+ justify-content: space-around;
+ width: 90%;
+ background-color: rgb(244, 248, 252);
+ border-radius: 2rem;
+  
+}
+.cart-container a
+{
+font-size: 1rem;
+color: rgb(39, 138, 252);
 
+  
+}
+.cart-container p
+{
+font-size: 1rem;
+color: rgb(124, 124, 124);
+font-style: italic;
+margin-right: 4rem;
+
+  
+}
+.cart-head
+{
+  text-align: right;
+  display: flex;
+ width: 100%;
+justify-content: right;
+margin: 2rem;
+
+gap: 1rem;
+  
+}
+.cart-left
+{
+  text-align: right;
+ 
+  width: 30%;
+ 
+}
+.cart-right
+{
+  text-align: right;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content:flex-end;
+  align-content: flex-start;
+
+}
+.cart-book
+{
+
+  box-shadow: 0px 5px 10px 0px rgba(187, 187, 187, 0.2);
+  padding: 2rem;
+  font-size:1.5rem;
+  border-radius: 1rem;
+}
+.cart-book img
+{
+  float: right;
+  width:50px;
+  margin: 0.3rem;
+}
+.note
+{
+
+ margin-right:6rem; 
+ border-right: yellow solid 5px;
+ position: relative;
+ right: 0px;
+ margin-top: 2rem;
+ 
+}
+.cart-book p
+{
+ 
+  
+ 
+}
+
+.cart-left{
+  display: flex;
+  flex-wrap: nowrap ;
+  flex-direction: column;
+}
+.cart-left1{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
 /************** timer *****************/
 .timer
