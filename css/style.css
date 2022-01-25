@@ -13,6 +13,7 @@ body
 {
     text-align:right;
     font-size: 1rem;
+    font-family:AirArabia Normal;
 }
 
 header{
@@ -26,6 +27,8 @@ ul
   
     list-style:none;
     display: flex;
+    width: 100%;
+    
 
 }
 a{
@@ -34,12 +37,27 @@ a{
  header ul li
 {
     border-width:1px 1px 1px 0;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
   border-style: solid ;
-  padding:.9rem;
-  width: 50%;
+  padding:.7rem;
+  font-weight: bold;
+  width:100%;
+  color: rgb(23, 83, 83);
  cursor: pointer;
     
 }
+header ul li img
+{
+width: 15px;
+margin-left: .5vw;
+    
+}
+
+
 
 header img
 {
@@ -87,8 +105,7 @@ header img
 
 .open .mobile
 {
-visibility: visible;
-	
+visibility: visible;	
 	padding-top:30px;
 	padding-left:10px;
 	height:auto;
@@ -97,8 +114,8 @@ visibility: visible;
 	flex-direction: column;
 	align-items:flex-start;
 	justify-content:flex-start;
-	background-color:rgb(0,0,0,0.5);
-  color: aliceblue;
+	background-color:rgba(255, 255, 255, 0.9);
+  color: rgb(255, 255, 255);
 	border-radius: 2rem;
 	
 
@@ -109,6 +126,7 @@ visibility: visible;
 	visibility:hidden;
 	position: absolute;
 	top: 50px;
+ 
 	left: 0;
 	height: calc(100vh-50px);
 	width: 100%;
@@ -167,6 +185,53 @@ margin:0.3rem;
  
 }
 /************* end nav*******************/
+.h1main
+{
+  display: flex;
+  justify-content: right;
+ padding:2rem;
+  width: 100%;
+}
+
+/************* departements icons *******************/
+
+.dep-icon
+{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+
+
+}
+
+.dep-icon1
+{
+ margin:2rem;
+
+}
+
+
+/************* ADDS*******************/
+.adds
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.add
+{
+ margin:.5rem;
+
+}
+
+
+
+/************* ADDS*******************/
+
 
 /*********** Slider ****************/
 .slider
@@ -196,7 +261,7 @@ margin:0.3rem;
   .slider3
   {
     
-    animation: slid1 4s infinite;
+    animation: slid1 10s infinite;
     width: 100%;
  
   }
@@ -214,7 +279,9 @@ margin:0.3rem;
 /*******************books***********************/
 .books
 {
-  display: flex;
+  border-top: 1px gey solid;
+  margin-top:1rem ;
+  display:flex;
   margin-left: 15%;
   margin-right: 15%;
   justify-content: space-around;
@@ -230,19 +297,49 @@ margin:0.3rem;
   margin-bottom:2rem;
   width:15rem;
   padding: 1rem;
-  border: 1px solid black;
-
+  box-shadow: 0px 5px 10px 0px rgba(187, 187, 187, 0.2);
 
   
 }
+.book p
+{
+  text-align: center;
+  margin: auto;
+  color: rgb(114, 119, 124);
+  font-size: small;
+  font-weight: bold;
+  
+}
+.book h4
+{
+  text-align: center;
+  margin: auto;
+  color: rgb(255, 0, 0);
+  font-size: 1.3rem;
+  margin: 1rem;
+  font-weight: bold;
+  
+}
+.book img
+{
+  margin: 1rem;
 
+}
 .booktype
 {
-  font-size: 0.8rem;
+  margin-top: 0;
+  font-size: 0.5rem;
   width: 100%;
  display: flex;
  align-items: center;
+ justify-content: center;
+
 }
+.booktype img
+{
+ margin: 0;
+}
+
 
 /********  model book**********************/
 
@@ -317,32 +414,56 @@ border-radius: 0.5rem 0.5rem 0 0;
   padding:0.5rem;
   font-size:1.5rem;
 }
-
+#cart-count
+{
+  text-align: center;
+  color: aliceblue;
+  position: relative;
+  background-color:red;
+  width: 30px;
+  padding:.3rem;
+  height: 30px;
+  border-radius: 50%;
+  top:-120px;
+  left:60px;
+}
 /*****************CART***********************/
+#closecart
+{
+  background-color: rgb(209, 9, 9);
+  color: aliceblue;
+  border: none;
+  width: 50px;
+  border-radius: 50%;
+}
+
+
+
 .cart-container
 {
 
   visibility: hidden;
   position: absolute;
- display: flex;
- flex-wrap: wrap;
+display: flex;
+flex-wrap: wrap;
  text-align: right;
  justify-content: space-around;
- width: 90%;
+ width:70%;
  background-color: rgb(244, 248, 252);
- border-radius: 2rem;
+ padding-bottom: 1rem;
+
   
 }
 .cart-container a
 {
-font-size: 1rem;
+font-size:0.7rem;
 color: rgb(39, 138, 252);
 
   
 }
 .cart-container p
 {
-font-size: 1rem;
+font-size: 0.7rem;
 color: rgb(124, 124, 124);
 font-style: italic;
 margin-right: 4rem;
@@ -355,18 +476,11 @@ margin-right: 4rem;
   display: flex;
  width: 100%;
 justify-content: right;
-margin: 2rem;
-
+margin: 1rem;
 gap: 1rem;
   
 }
-.cart-left
-{
-  text-align: right;
- 
-  width: 30%;
- 
-}
+
 .cart-right
 {
   text-align: right;
@@ -382,15 +496,20 @@ gap: 1rem;
 {
 
   box-shadow: 0px 5px 10px 0px rgba(187, 187, 187, 0.2);
-  padding: 2rem;
+  padding: 1rem;
   font-size:1.5rem;
   border-radius: 1rem;
+
 }
 .cart-book img
 {
-  float: right;
-  width:50px;
+ 
+  width:40px;
   margin: 0.3rem;
+}
+.cart-book h4
+{
+  font-size:1.1rem;
 }
 .note
 {
@@ -399,7 +518,8 @@ gap: 1rem;
  border-right: yellow solid 5px;
  position: relative;
  right: 0px;
- margin-top: 2rem;
+ font-size: 1rem;
+ margin-top: 1rem;
  
 }
 .cart-book p
@@ -410,13 +530,13 @@ gap: 1rem;
 }
 
 .cart-left{
+  font-size:0.8rem;
   display: flex;
   flex-wrap: nowrap ;
   flex-direction: column;
   justify-content: space-around;
   padding: 1rem;
   height: 20rem;
-  width: 30%;
   box-shadow: 0px 5px 10px 0px rgba(48, 47, 47, 0.2);
 
 }
@@ -442,23 +562,9 @@ margin: 1rem;
 padding: 1rem;
 }
 /************** timer *****************/
+
 .timer
 {
-  
-  width: 100%;
-  height:50vh;
-  color:rgb(197, 74, 74);
-  font-size: 4rem;
-  display: flex;
-  justify-content: center;
- align-items:center;
-}
-.timer h1
-{
-
-margin: 3rem;
-position: absolute;
-right: 0px;
 }
 
 /****************FOOTER*********************/
@@ -468,6 +574,7 @@ footer{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background-color: rgb(24, 25, 26);
     color: honeydew;
+    font-size: small;
 }
 footer ul 
 {
@@ -477,10 +584,11 @@ footer h1
 {
     text-align: right;
     border-bottom: solid 0.02px white;
-    width: 70%;
+    width:100%;
     color: rgb(184, 180, 180);
-    font-size:1.57rem;
+    font-size:1.3rem;
     margin-left: auto;
+    padding-bottom:0.6rem;
 }
 footer ul li 
 {
@@ -497,6 +605,13 @@ padding-left: 1rem;
     background-color: honeydew;
     margin:0rem 0rem 1rem 2rem;
     border-radius: 0.6rem;
+}
+footer img
+{
+  padding: 0.3rem;
+    background-color:  rgb(24, 25, 26);
+   
+    border-radius:50%
 }
 
 
@@ -517,6 +632,22 @@ footer input{
    
 }
 
+.footer-last
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(75, 75, 75);
+  height: auto;
+  background-color: rgb(201, 201, 201);
+  padding: 1rem;
+}
+
+.footer-last img
+{
+  width: 5rem;
+  
+}
 
 
 
@@ -541,6 +672,7 @@ header nav
 header
 {
   background-color: white;
+
 }
 	#humb_icon
 	{
@@ -554,8 +686,18 @@ header
     margin-right:0%;
   
   }
-  
+  footer
+  {
+    grid-template-columns:1fr 1fr;
 
+  }
+  .cart-right
+  {
+  
+    width:100%;
+   
+  
+  }
 }
 
 
