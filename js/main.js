@@ -20,28 +20,6 @@ popup.addEventListener("click",()=>{
 });
 document.getElementById('loginclose').onclick=function()
 { container.style.visibility='hidden';}
-//**********popup book************** *
-
-const callImage = img => {
-   document.getElementById("imageView").setAttribute("src", img.getAttribute("src"));
-   document.getElementById('popUP').style.display = "block";
-}
-const hideModule = id => document.getElementById(id).style.display = "none";
-
-const bookprev=document.getElementById('book-prev');
-const booknext=document.getElementById('book-next');
-
-
-bookprev.addEventListener("click",()=>{
-   document.getElementById("imageView").src="books/harry1.jpg";
-
-});
-
-
-booknext.addEventListener("click",()=>{
-   document.getElementById("imageView").src="books/harry2.jpg";
-
-});
 
 
 /*******************CART ************ */
@@ -92,11 +70,35 @@ for(let i=0;i<search_key.length;i++)
       });
       
 }
-/********* SEARCH ********** */
+/********* slider ********** */
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 
 
 
 
+function togglestyle()
+{
+   var s=document.getElementsByTagName('link')[0];
+   if(s.getAttribute('href')=='css/style.css'){
+      s.setAttribute('href','css/styleEN.css')
+   }else{
+      s.setAttribute('hrf','css/style.css');
+   }
+}
 
 
 
@@ -135,6 +137,32 @@ d.innerHTML=remindays+"أيام";
 }
 
 setInterval(counttime,1000);
+
+
+//**********popup book************** *
+
+const callImage = img => {
+   document.getElementById("imageView").setAttribute("src", img.getAttribute("src"));
+   document.getElementById('popUP').style.display = "block";
+}
+const hideModule = id => document.getElementById(id).style.display = "none";
+
+const bookprev=document.getElementById('book-prev');
+const booknext=document.getElementById('book-next');
+
+
+bookprev.addEventListener("click",()=>{
+   document.getElementById("imageView").src="books/harry1.jpg";
+
+});
+
+
+booknext.addEventListener("click",()=>{
+   document.getElementById("imageView").src="books/harry2.jpg";
+
+});
+
+
 
 
 

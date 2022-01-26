@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>elibrary</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/login.css" />
-  <link href="js/main.js" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link href="../js/main.js/" />
  
 
 </head>
@@ -20,20 +20,20 @@
     <nav>
       <ul>
 
-        <li onclick="togglestyle()" style="flex-shrink:2;">English <img src="icons/translate.png" alt=""></li>
+        <li>English <img src="../icons/translate.png" alt=""></li>
 
-        <li style="flex-shrink:2;">
-          <h4>اليمن YER <img src="icons/yemen.png" alt=""></h4>
+        <li>
+          <h4>اليمن YER <img src="../icons/yemen.png" alt=""></h4>
         </li>
-        <li style="flex-shrink:1.9;"><a> سياسة الخصوصية</a><img src="icons/privacy.png" alt="xxx"></li>
-        <li style="flex-shrink:2;"><a>المساعدة </a><img src="icons/help.png" alt=""></li>
-        <li style="flex-shrink:2;"><a>اتصل بنا</a><img src="icons/privacy.png" alt=""> </li>
-        <li style="flex-shrink:2;"><a>من نحن</a><img src="icons/track.png" alt=""></li>
-        <li style="flex-shrink:2;"><a>الرئيسية</a><img src="icons/star.png" alt=""></li>
+        <li><a> سياسة الخصوصية<img src="../icons/privacy.png" alt="xxx"></a></li>
+        <li><a>المساعدة <img src="../icons/help.png" alt=""></a></li>
+        <li><a>اتصل بنا<img src="../icons/privacy.png" alt=""></a> </li>
+        <li><a>من نحن<img src="../icons/track.png" alt=""></a></li>
+        <li><a>الرئيسية<img src="../icons/star.png" alt=""></a></li>
 
 
-        <li style="flex-shrink:1.8;" id="loginbt"> أدخل الحساب او سجل الدخول
-          <img src="icons/user.png" alt="">
+        <li id="loginbt"> أدخل الحساب او سجل الدخول
+          <img src="../icons/user.png" alt="">
         </li>
       </ul>
 
@@ -46,20 +46,20 @@
       <div class="bar3"></div>
       <ul style="color:oldlace;" class="mobile">
 
-        <li>English <img src="icons/translate.png" alt=""></li>
+        <li>English <img src="../icons/translate.png" alt=""></li>
 
 
         <li>
-          <h4>اليمن YER <img src="icons/yemen.png" alt=""></h4>
+          <h4>اليمن YER <img src="../icons/yemen.png" alt=""></h4>
         </li>
 
-        <li><a> سياسة الخصوصية<img src="icons/privacy.png" alt=""></a></li>
-        <li><a>المساعدة <img src="icons/help.png" alt=""></a></li>
-        <li><a>اتصل بنا<img src="icons/privacy.png" alt=""></a> </li>
-        <li><a>من نحن<img src="icons/track.png" alt=""></a></li>
-        <li><a>الرئيسية<img src="icons/star.png" alt=""></a></li>
-        <li >أدخل الحساب او سجل الدخول
-          <img src="icons/user.png" alt="">
+        <li><a> سياسة الخصوصية<img src="../icons/privacy.png" alt=""></a></li>
+        <li><a>المساعدة <img src="../icons/help.png" alt=""></a></li>
+        <li><a>اتصل بنا<img src="../icons/privacy.png" alt=""></a> </li>
+        <li><a>من نحن<img src="../icons/track.png" alt=""></a></li>
+        <li><a>الرئيسية<img src="../icons/star.png" alt=""></a></li>
+        <li>أدخل الحساب او سجل الدخول
+          <img src="../icons/user.png" alt="">
         </li>
       </ul>
     </div>
@@ -86,9 +86,9 @@
   <!--      logo and search         --->
   <img src="" alt="">
   <div class="logo">
-    <img id="cart" class="basket" src="icons/basket.png" alt="" width="2px" height="2px">
+    <img id="cart" class="basket" src="../icons/basket.png" alt="" width="2px" height="2px">
     <input id="search" type="search" placeholder="البحث">
-    <img id="site-logo" src="icons/home.png" alt="">
+    <img src="../icons/home.png" alt="">
   </div>
   <div id="cart-count">0</div>
 
@@ -117,7 +117,7 @@
       <div class="cart-left2">
     
         <p>بالضغط على انهاء ف انت توافق على سياسة الخصوصية</p>
-        <a href="details.html"> <button> سلة التسوق</button></a>
+        <a href="pages/stepper.html"> <button>تحديث سلة التسوق</button></a>
       </div>
 
 
@@ -170,12 +170,11 @@
   <!-- Slideshow container -->
 
   <div class="slider">
-    <img class="mySlides" src="adds/home4.jpg">
-    <img class="mySlides" src="adds/home3.jpg">
-    <img class="mySlides" src="adds/home2.jpg">
-    <img class="mySlides" src="adds/home1.jpg">
+    <div class="slider1"><img src="adds/home.png" alt="" height="300rem" width="80%"></div>
+    <div class="slider2"><img src="adds/home.png" alt="" height="300rem" width="80%"></div>
+    <div class="slider3"><img src="adds/slider1.jpg" alt="" height="300rem" width="80%"></div>
+
   </div>
-  
 
   <!-- Slideshow container  end -->
 
@@ -183,9 +182,8 @@
 
 
   <!-- departements icons container   -->
-  <a href="category.html">
-<h1 class="h1main">تصفح حسب القسم</h1></a>
-<a href="category.html">
+<h1 class="h1main">تصفح حسب القسم</h1>
+
 <div class="dep-icon">
   <div class="dep-icon1"><img src="icons/icon1.png" alt=""></div>
   <div class="dep-icon1"><img src="icons/icon2.png" alt=""></div>
@@ -195,7 +193,7 @@
   <div class="dep-icon1"><img src="icons/icon6.png" alt=""></div>
   <div class="dep-icon1"><img src="icons/icon7.png" alt=""></div>
   
-</div></a>
+</div>
 
 
 
@@ -227,7 +225,7 @@
 
     <div class="book">
       <div id="days"></div>
-      <img src="books/book1.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/book1.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -262,7 +260,7 @@
   <div class="books" id="books">
 
     <div class="book">
-      <img src="books/book1.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/book1.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -284,7 +282,7 @@
 
 
     <div class="book">
-      <img src="books/harry2.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/harry2.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -310,7 +308,7 @@
 
     
     <div class="book">
-      <img src="books/Hobbit_book.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/Hobbit_book.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -331,7 +329,7 @@
 
     
     <div class="book">
-      <img src="books/harry1.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/harry1.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -356,7 +354,7 @@
 
     
     <div class="book">
-      <img src="books/harry2.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/harry2.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -385,7 +383,7 @@
 
     
     <div class="book">
-      <img src="books/harry3.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/harry3.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -413,7 +411,7 @@
 
     
     <div class="book">
-      <img src="books/harry2.jpg" alt="" height="250rem" width="180rem">
+      <img onclick="callImage(this);" src="books/harry2.jpg" alt="" height="250rem" width="180rem">
       <div class="booktype">
         <h1 class="search_key">كتاب الكتروني</h1>
         <img src="icons/logo.png" alt="" height="50rem">
@@ -446,7 +444,17 @@
   <!--  books end-->
 
   <!--  books popUpp-->
- 
+  <div id="popUP">
+    <div class="header">
+      <button onclick="hideModule('popUP');">X</button>
+      <button id="book-prev">></button>
+      <button id="book-next">
+        <</button>
+
+    </div>
+    <img id="imageView">
+  </div>
+
   <!--  footer     -->
   <footer>
 
