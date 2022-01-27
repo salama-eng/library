@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>elibrary</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/stepper.css" />
   <link rel="stylesheet" href="../css/login.css" />
   <link href="../js/main.js" />
  
@@ -84,6 +83,7 @@
   <!--   end login popupp     --->
 
 
+
   <!--      logo and search         --->
   <img src="" alt="">
   <div class="logo">
@@ -98,149 +98,91 @@
 
 
 
-    <div class="container">
-        <div id="progres" class="progres">
-            <div class="circle">1</div>
-            <div class="circle">2</div>
-            <div class="circle">3</div>
-            <div class="circle">4</div>
-        </div>
 
+  <div id="cart-container" class="cart-container">
+    <div class="cart-head">
+      <h2>السلة</h2>
+      <img src="../icons/basket.png" alt="" height="50px" width="50px">
     </div>
-   
+    <div class="cart-left">
+      
+      <div class="cart-left1">
+       <table>
+        <tr><td>68.97 </td>
+          <th>المجموع</th>
+       
+        </tr>
 
-     <div class="form">
-    <div id="form1" class="form1">
+        <tr><td style="color: olive;">مجاني </td>
+          <th>تكاليف الشحن</th>
+       
+        </tr>
 
-    <form>
-    <input type="text" placeholder="enter your name">
-    <input type="text" placeholder="enter your email addres">
-    <input type="text" placeholder="enter your phone number">
-     
-    </form>
-    </div>
-    <div id="form2" class="form1">
-
-        <form >
-     
-            <input type="text" placeholder="enter your country">
-            <input type="text" placeholder="enter your current address">
-            <input type="text" placeholder="enter your zipcode">
-        </form>
+        <tr style="color: red;font-size: x-large;"><td>68.97</td>
+          <th>   المجموع الكلي   <em style="color: grey;
+            font-size: x-small;font-style: normal;">    شامل الضريبة    </em></th>
         
-    </div>
+        </tr>
 
-    <div id="form3" class="form1">
-   <h3>please choose your payment way</h3>
-        <form>
-   
-      <input type="radio" name="payment" value="paypal" checked> paypal
-      <input type="radio" name="payment" value="VISA" > Visa
-      <input type="number" placeholder="enter your card number">
+       </table>
+        
+      </div>
+      <div class="cart-left2">
     
-        </form>
+        <p>بالضغط على انهاء ف انت توافق على سياسة الخصوصية</p>
+        <a href="stepper.html"> <button> تحديث سلة التسوق</button></a>
+      </div>
+
+
+
+
+
     </div>
+    <div class="cart-right">
 
-    <div id="form4"  class="form1">
 
-        <form>
-    
-          <h3>GREAT!! WE ARE ABOUT TO DONE </h3>
-         <label>Total Price :</label>  <p style="color: red;">745$</p>
-         
-    
-        </form>
+      <div class="cart-book">
+
+        <img src="../books/book13.jpeg" alt="" width="90px">
+        <h4>البداية والنهاية الجزء الاول</h4>
+        <p>منتج قابل للخصم</p>
+        <div class="note">
+          <h5>ملاحضة:هذا المنتج رقمي وسيتم توصيلة
+            عن طريق البريد الالكتروني</h5> <a>كيفية الحصول على المنتج</a>
+        </div>
+      </div>
+
+      <div class="cart-book">
+
+        <img src="../books/book4.jpeg" alt="" width="90px">
+        <h4>البداية والنهاية الجزء الاول</h4>
+        <p>منتج قابل للخصم</p>
+        <div class="note">
+          <h5>ملاحضة:هذا المنتج رقمي وسيتم توصيلة
+            عن طريق البريد الالكتروني</h5> <a>كيفية الحصول على المنتج</a>
+        </div>
+      </div>
+      <div class="cart-book">
+
+        <img src="../books/book7.jpeg" alt="" width="90px">
+        <h4>البداية والنهاية الجزء الاول</h4>
+        <p>منتج قابل للخصم</p>
+        <div class="note">
+          <h5>ملاحضة:هذا المنتج رقمي وسيتم توصيلة
+            عن طريق البريد الالكتروني</h5> <a>كيفية الحصول على المنتج</a>
+        </div>
+      </div>
+
+
     </div>
-    
-</div> 
-
-        <div class="container-btn">
-        <button id="prev-btn" class="btn">prev</button>
-        <button id="next-btn" class="btn">next</button>
-    </div>
-    <script>
-  const nextbtn=document.getElementById('next-btn');
-  const prevbtn=document.getElementById('prev-btn');
-  const progres=document.getElementById('progres');
-  const steps=document.querySelectorAll('.circle');/***to return array********/
-  const forms=document.querySelectorAll('.form1');
-  const form1=document.getElementById('form1');
-  const form2=document.getElementById('form2');
-  const form3=document.getElementById('form3');
-  const form4=document.getElementById('form4');
-  let index=-1;
-  nextbtn.addEventListener("click",function(){
-   index++;
-
-  if(index>steps.length)
-  {
-   index=steps.length;
-  }
-steps.forEach((item,i)=>{
-  if(i<=index)
-  {
-   
-      item.classList.add('active'); 
-      forms.forEach((item,i)=>{
-      if(i==index){
-        item.classList.add('active-form'); 
-        let x=index;
-      }
-     else if(i==index-1){
-        item.classList.remove('active-form'); 
-      }
-      if(index==3)
-      {
-        nextbtn.innerText="submit";
-        nextbtn.onclick=function()
-        {
-            location.href="../index.html";
-        }
-      }
-    });
-   }
- 
-
-
-});
-
-  });
-
-  prevbtn.addEventListener("click",function(){
-   index--;
- 
-  steps.forEach((item,i)=>{
-  if(i>index)
-  {
-     
-      item.classList.remove('active');
-   
-  }
-
-});
-
-forms.forEach((item,i)=>{
-      if(i==index+1)
-      {
-          item.classList.remove('active-form'); 
-      }
-      else if(i==index)
-      item.classList.add('active-form'); 
-     
-  });
-
-  });
-
-
-  
-
-    </script>
+  </div>
 
 
 
 
 
-<footer>
+
+  <footer>
 
 
 

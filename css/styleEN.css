@@ -909,6 +909,14 @@ font-size: 1.1rem;
 color: grey;
   
 }
+
+.timer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+}
 .similler-products .price
 {
   text-align: center;

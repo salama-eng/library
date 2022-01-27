@@ -23,14 +23,6 @@ document.getElementById('loginclose').onclick=function()
 
 
 /*******************CART ************ */
-const container1 =document.getElementById('cart-container');
-let cartbtn=document.getElementById('cart');
-cartbtn.addEventListener("click",()=>{
-   container1.style.visibility='visible';
-});
-document.getElementById('closecart').onclick=function()
-{ container1.style.visibility='hidden';};
-
 /**********CART COUNTER ************** */
 let counter_basket=0;
 
@@ -72,6 +64,34 @@ for(let i=0;i<search_key.length;i++)
 }
 /********* slider ********** */
 
+
+
+
+
+
+
+const callImage = img => {
+   document.getElementById("imageView").setAttribute("src", img.getAttribute("src"));
+   document.getElementById('popUP').style.display = "block";
+}
+const hideModule = id => document.getElementById(id).style.display = "none";
+
+const bookprev=document.getElementById('book-prev');
+const booknext=document.getElementById('book-next');
+
+
+bookprev.addEventListener("click",()=>{
+   document.getElementById("imageView").src="books/book2-1.jpeg";
+
+});
+
+
+booknext.addEventListener("click",()=>{
+   document.getElementById("imageView").src="books/book2-2.jpeg";
+
+});
+
+
 var myIndex = 0;
 carousel();
 
@@ -83,24 +103,21 @@ function carousel() {
   }
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
+  x[myIndex-1].style.display ="block";  
   setTimeout(carousel, 2000); // Change image every 2 seconds
 }
 
 
-
-
 function togglestyle()
 {
-   var s=document.getElementsByTagName('link')[0];
+   let s=document.getElementsByTagName('link')[0];
    if(s.getAttribute('href')=='css/style.css'){
       s.setAttribute('href','css/styleEN.css')
-   }else{
-      s.setAttribute('hrf','css/style.css');
+   }
+   else{
+      s.setAttribute('href','css/style.css');
    }
 }
-
-
 
 
 /************ Timer ************ */
@@ -140,27 +157,6 @@ setInterval(counttime,1000);
 
 
 //**********popup book************** *
-
-const callImage = img => {
-   document.getElementById("imageView").setAttribute("src", img.getAttribute("src"));
-   document.getElementById('popUP').style.display = "block";
-}
-const hideModule = id => document.getElementById(id).style.display = "none";
-
-const bookprev=document.getElementById('book-prev');
-const booknext=document.getElementById('book-next');
-
-
-bookprev.addEventListener("click",()=>{
-   document.getElementById("imageView").src="books/harry1.jpg";
-
-});
-
-
-booknext.addEventListener("click",()=>{
-   document.getElementById("imageView").src="books/harry2.jpg";
-
-});
 
 
 

@@ -59,11 +59,15 @@ body{
 }
 #loginclose
 {
+    text-align: center;
     background-color: rgb(255, 0, 0);
     color: rgb(255, 255, 255);
-    width:50px;
+    width:30px;
     float: left;
     font-size:small;
+    padding:3px;
+    box-shadow: none;
+    height: 30px;
 }
 .login button,.signup button
 {
